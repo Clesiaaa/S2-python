@@ -4,7 +4,12 @@ def get_color(r, g, b):
     """ Retourne une couleur à partir de ses composantes r, g, b entre 0 et 255"""
     return '#{:02x}{:02x}{:02x}'.format(r, g, b)
 
-
+def draw_pixel(i:int, j:int, color:str)->None:
+    """Change de couleur seulement un pixel du canvas"""
+    rec=canvas.create_rectangle(20,20,10,10, fill=color)
+    canvas.move(rec, i, j)
+    #print("pixel blanc")
+    
 root = tk.Tk()
 
 btn_1 =tk.Button(root, text="Aléatoire")
