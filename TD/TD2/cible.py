@@ -19,3 +19,5 @@ while n != 0:
         i = 0
 
 root.mainloop()
+
+#c'est bancale wsh dsl

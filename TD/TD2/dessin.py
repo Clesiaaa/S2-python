@@ -4,19 +4,23 @@ import random as rd
 couleur = "white"
 
 def demande_couleur()->str:
+    """Demande à l'utilisateur la couleur souhaité"""
     global couleur
     couleur = input("Couleur ? : black, white, red, blue, cyan, yellow : ")
     return couleur
 
 def Cercle()->None:
+    """Fait apparaitre un cercle de manière aléatoire sur la surface"""
     cercle=Canvas.create_oval(200,200,100,100, fill=couleur)
     Canvas.move(cercle, rd.randint(100,549), rd.randint(100,549))
 
 def Carre()->None:
+    """Fait apparaitre un carré de manière aléatoire sur la surface"""
     carre=Canvas.create_rectangle(200,200,100,100, fill=couleur)
     Canvas.move(carre, rd.randint(100,549), rd.randint(100,549))
     
 def Croix()->None:
+    """Fait apparaitre une croix de manière aléatoire sur la surface"""
     p1,p2 = rd.randint(100,549),rd.randint(100,549)
     l1=Canvas.create_line(15, 25, 35, 25, fill=couleur)
     l2=Canvas.create_line(25, 35, 25, 15, fill=couleur)
